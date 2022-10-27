@@ -22,6 +22,9 @@ a{
     max-width: 980px;
     margin: 0 auto;
 }
+.inactive{
+    display: none;
+}
 header{
     width: 100%;
     height: 140px;
@@ -173,6 +176,10 @@ nav .profile-link a:hover{
 .blogs-post-container .post-container img{
     width: 100%;
 }
+.post-container img:hover{
+    transform: scale(1.05);
+}
+
 footer{
     width: 100%;
     height: 80px;
