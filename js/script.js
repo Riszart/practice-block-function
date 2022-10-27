@@ -2,6 +2,12 @@ const containerGrid = document.querySelector('.grid-container-grid')
 const imgNewsP = document.querySelector('.img-news-p')
 const pContentNews = document.querySelector('.p-content-news')
 const titleSubTop = document.querySelector('.title-sub-top')
+const blogsButton = document.querySelector('.blogs-button')
+const blogsMain = document.querySelector('.blogs-main')
+const blogContent2 = document.querySelector('.blog-content-2')
+const imgContainer2 = document.querySelector('.img-container-2')
+
+
 
 function addFlexInactive(){
     blockAddNews.classList.toggle('inactive')
@@ -77,9 +83,24 @@ function wiewNews(){
                 imgNewsP.setAttribute('src', iten.image) 
                 pContentNews.innerText = iten.abstract
                 titleSubTop.innerText = iten.titulo
+                blogsButton.setAttribute('id', iten.id)
             }
         }
         })
-    })   
+    })
 }
 
+blogsButton.addEventListener('click', structurar)
+function structurar(){
+    blogsMain.classList.add('unvisibility')
+    blogContent2.classList.remove('inactive')
+    for(iten of newsCom){
+        if(iten.id == blogsButton.id){
+            const h1NewsBlogOther = document.querySelector('.h1-news-blog-other')
+            const pNewsBlogOther = document.querySelector('.p-news-blog-other')
+            h1NewsBlogOther.innerText = iten.contenido
+            pNewsBlogOther.innerText = iten.titulo
+            imgContainer2.setAttribute('src', iten.image)
+        }
+    }
+}
