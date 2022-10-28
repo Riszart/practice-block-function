@@ -23,11 +23,7 @@ a{
     margin: 0 auto;
 }
 .inactive{
-    display: none;
-}
-.unvisibility{
-    visibility: hidden;
-    height: 0;
+    display: none !important;
 }
 header{
     width: 100%;
@@ -195,6 +191,19 @@ footer{
 footer p{
     color: white;
     margin-top: 30px;
+}
+.content-img-close{
+    height: 30px;
+}
+.content-img-close p{
+    display: inline-block;
+    margin-left: 30px;
+    border-bottom: black solid 1px;
+}
+.content-img-close p:hover{
+    transform: scale(0.89);
+    color: #47cfac;
+    border-bottom: #47cfac solid 1px;
 }
 .blogpost-img-container{
     padding: 0 50px 40px;
